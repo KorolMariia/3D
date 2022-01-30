@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.spinner {
+  width: 120px;
+  height: 120px;
+  border: 12px solid black;
+  border-top-color: red;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.bounce {
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  animation: jump 0.4s ease-out infinite alternate;
+}
+
+.bounce-reverse {
+  animation-direction: alternate-reverse;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(16px);
+  }
+}
